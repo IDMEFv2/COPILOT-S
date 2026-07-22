@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IDMEFv2 (draft-lehmann-idmefv2-08) JSON schema (partial)",
+  "type": "object",
+  "required": ["schema_version","create_time","analyzer","classification"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "create_time": { "type": "string" },
+    "analyzer": {
+      "type": "object",
+      "required": ["name"],
+      "properties": { "name": { "type":"string" }, "ip": { "type":"string" } }
+    },
+    "classification": {
+      "type": "object",
+      "required": ["text"],
+      "properties": { "text": { "type":"string" }, "references": { "type":"array" }, "category": { "type":"string" } }
+    },
+    "sources": { "type": "array" },
+    "targets": { "type": "array" },
+    "assessment": { "type": "object", "properties": { "impact": { "type":"integer" }, "confidence": { "type":"integer" } } },
+    "observables": { "type": "array" },
+    "evidence": { "type": "array" }
+  },
+  "additionalProperties": true
+}

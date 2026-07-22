@@ -1,0 +1,25 @@
+# Suricata category -> IDMEFv2 canonical category mapping
+
+# This file maps common Suricata alert category strings to canonical
+# IDMEFv2 categories (as used in classification.category). Operators can
+# customize this file to match their taxonomy.
+
+Attempted Administrator Privilege Gain: Access.Privilege.Elevation.Attempted
+Successful Administrator Privilege Gain: Access.Privilege.Elevation.Successful
+Attempted User Privilege Gain: Access.Privilege.Elevation.Attempted
+Successful User Privilege Gain: Access.Privilege.Elevation.Successful
+Attempted Information Leak: Data.Theft.InformationLeak.Attempted
+Information Leak: Data.Theft.InformationLeak
+Attempted Denial of Service: Availability.DenialOfService.Attempted
+Denial of Service: Availability.DenialOfService
+Attempted Reconnaissance: Recon.Scanning
+Network Scan: Recon.Scanning
+SQL Injection: Application.Web.Attack.SQLInjection
+Cross Site Scripting: Application.Web.Attack.XSS
+Web Application Attack: Application.Web.Attack
+Exploit Attempt: Malware.Exploit
+Malware: Malware.Detection
+Policy Violation: Policy.Violation
+ARP Spoofing: Network.Anomaly.ARP
+Firewall Drop: Network.Firewall.Dropped
+Suspicious TLS Certificate: TLS.Certificate.Issue
