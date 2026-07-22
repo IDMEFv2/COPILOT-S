@@ -1,0 +1,23 @@
+# Example suricata.yaml snippets for plugins
+
+# For idmefv2-output (writes NDJSON to file)
+outputs:
+  - eve-log:
+      enabled: yes
+      filetype: idmefv2
+      idmefv2:
+        file: /var/log/suricata/idmefv2.json
+        buffer-size: 10000
+        rotate-size: 0
+        analyzer-name: "suricata-node-01"
+
+# For idmefv2-http (optional: send to HTTPS endpoint)
+# This plugin reads environment variable IDMEFV2_HTTP_ENDPOINT in this prototype.
+# In a production version we will parse config from suricata.yaml.
+outputs:
+  - eve-log:
+      enabled: yes
+      filetype: idmefv2-http
+      idmefv2_http:
+        enabled: true
+        # endpoint is read from env IDMEFV2_HTTP_ENDPOINT for prototype

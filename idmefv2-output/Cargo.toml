@@ -1,0 +1,16 @@
+[package]
+name = "idmefv2-output"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "idmefv2_output"
+crate-type = ["cdylib"]
+
+[dependencies]
+idmefv2-core = { path = "../core" }
+serde_json = "1.0"
+log = "0.4"
+
+[features]
+default = []

@@ -1,0 +1,2 @@
+[workspace]
+members = ["core","idmefv2-output","idmefv2-http"]
